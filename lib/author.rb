@@ -1,7 +1,7 @@
 class Author
   attr_accessor :name
   attr_reader :posts
-  @@songs = []
+  @@posts = []
   def initialize(name)
     @name = name
     @posts = []
@@ -10,5 +10,6 @@ class Author
   def add_post
     post = Post.new
     post.author = self
+    @@posts << post
   end
 end
